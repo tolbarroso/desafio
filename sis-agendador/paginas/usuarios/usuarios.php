@@ -2,7 +2,7 @@
     <h3><i class="bi bi-person-square"></i>Usuarios</h3>
 </header>
 <div>
-    <a class="btn btn-outline-secundary mb-2" href="index.php?menuop=cad-usuarios">Novo Usuario</a>
+    <a class="btn btn-outline-secundary mb-2" href="index.php?menuop=cad-usuarios"><i class="bi bi-person-plus-fill"></i>Novo Usuario</a>
 </div>
 <div>
     <form action="index.php?menuop=contatos" method="post">
