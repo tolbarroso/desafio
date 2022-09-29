@@ -1,15 +1,15 @@
 <header>
-    <h3>Usuarios</h3>
+    <h3><i class="bi bi-person-square"></i>Usuarios</h3>
 </header>
 <div>
-    <a href="index.php?menuop=cad-usuarios">Novo Usuario</a>
+    <a class="btn btn-outline-secundary mb-2" href="index.php?menuop=cad-usuarios">Novo Usuario</a>
 </div>
 <div>
     <form action="index.php?menuop=contatos" method="post">
         <input type="text" name="txt_pesquisa">
         <input type="submit" value="Pesquisar">
 
-        <button class="btn btn-success btn-sm" type="submit">Pesquisar</button>
+        <button class="btn btn-outline-success btn-sm" type="submit"><i class="bi bi-search"></i>Pesquisar</button>
     </form>
 </div>
 <table class="table table-dark table-striped table-bordered table-sm">
