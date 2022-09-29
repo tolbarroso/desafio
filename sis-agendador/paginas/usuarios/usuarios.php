@@ -8,6 +8,8 @@
     <form action="index.php?menuop=contatos" method="post">
         <input type="text" name="txt_pesquisa">
         <input type="submit" value="Pesquisar">
+
+        <button class="btn btn-success btn-sm" type="submit">Pesquisar</button>
     </form>
 </div>
 <table class="table table-dark table-striped table-bordered table-sm">
@@ -48,8 +50,8 @@
             <td><?=$dados["idUsuarios"] ?></td>
             <td class="text-nowrap"><?=$dados["nomeUsuarios"] ?></td>
             <td class="text-nowrap"><?=$dados["telUsuarios"] ?></td>
-            <td><a href="index.php?menuop=editar-usuarios&idUsuarios=<?=$dados[" idUsuarios"] ?>">Editar</a> </td>
-            <td><a href="index.php?menuop=excluir-usuarios&idUsuarios=<?=$dados[" idUsuarios"] ?>">Excluir</a> </td>
+            <td class="text-center"><a class="btn btn-butline-warning btn-sm" href="index.php?menuop=editar-usuarios&idUsuarios=<?=$dados[" idUsuarios"] ?>"><i class="bi bi-pencil-square"></i></a> </td>
+            <td class="text-center"><a class="btn btn-butline-danger btn-sm" href="index.php?menuop=excluir-usuarios&idUsuarios=<?=$dados[" idUsuarios"] ?>"><i class="bi bi-trash-fill"></i></a> </td>
 
         </tr>
         <?php  
