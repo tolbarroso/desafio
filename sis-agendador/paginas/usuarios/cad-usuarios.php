@@ -5,12 +5,18 @@
     <form action="index.php?menuop=inserir-usuarios" method="post">
     <div class="nb-3">
         <label class="form-label" for="nomeUsuarios">Nome</label>
-        <input class="form-control" type="text" name="nomeUsuario">
+        <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+            <input class="form-control" type="text" name="nomeUsuario">
+        </div>
     </div>
 
     <div class="nb-3">
         <label class="form-label" for="telUsuarios">Telefone</label>
-        <input class="form-control" type="text" name="telUsuario">
+        <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-telefone-fill"></i></span>
+            <input class="form-control" type="text" name="telUsuario">
+        </div>
     </div>
 
     <div class="nb-3">
