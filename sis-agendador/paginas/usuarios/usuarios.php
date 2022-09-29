@@ -58,19 +58,20 @@
         ?>
     </tbody>
 </table>
-<br>
+
+  <ul class="pagination">
 <?php
     $sqlTotal = "SELECT idUsuarios FROM tbusuarios";
     $sqrTotal = mysqli_query($conexao,$sqlTotal) or die(mysqli_error($conexao));
     $numTotal = mysqli_num_rows($sqrTotal);
     $totalPagina = ceil($numTotal/$quantidade);
 
-    echo "Total de Registros: $numTotal ";
-    echo "<a href="?menuop=usuarios&pagina=1">Primeira Pagina</a>";
+    echo "<li class='page-item'><span class='page-link'>Total de Registros:". $numTotal ." </span></li>";
+    echo "<li class='page-item'><a class='page-link' href="?menuop=usuarios&pagina=1">Primeira Pagina</a> </li>";
 
     if ($pagina>6) {
         ?>
-        <a href="?menuop=usuarios&pagina=<?php echo $pagina-1 ?>"></a>
+        <li class='page-item'><a class='page-link' href="?menuop=usuarios&pagina=<?php echo $pagina-1 ?>"><<<</a></li>
         <?php
     }
 
@@ -78,7 +79,7 @@
         if ($i == $pagina) {
             echo $i;
         } else {
-            echo "<a href=\"?menuop=usuarios&pagina=$i\">$i</a>";
+            echo "<li class='page-item'><a class='page-link' href=\"?menuop=usuarios&pagina={$i}\"> {$i} </a></li>";
         }
 
     }
@@ -91,3 +92,4 @@
 
     echo "<a href=\"?menuop=usuarios&pagina=$totalPagina\">Ultima Pagina</a>";
 ?>
+</ul>
