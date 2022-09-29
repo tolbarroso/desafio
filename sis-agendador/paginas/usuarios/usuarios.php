@@ -1,16 +1,16 @@
 <header>
-    <h3>Usuarios</h3>   
+    <h3>Usuarios</h3>
 </header>
 <div>
     <a href="index.php?menuop=cad-usuarios">Novo Usuario</a>
 </div>
 <div>
     <form action="index.php?menuop=contatos" method="post">
-        <input type="text" name="txt_pesquisa" >
+        <input type="text" name="txt_pesquisa">
         <input type="submit" value="Pesquisar">
     </form>
 </div>
-<table class="table table-dark table-houver">
+<table class="table table-dark table-striped table-bordered table-sm">
     <thead>
         <tr>
             <th>ID</th>
@@ -46,10 +46,10 @@
         ?>
         <tr>
             <td><?=$dados["idUsuarios"] ?></td>
-            <td><?=$dados["nomeUsuarios"] ?></td>
-            <td><?=$dados["telUsuarios"] ?></td>
-            <td><a href="index.php?menuop=editar-usuarios&idUsuarios=<?=$dados["idUsuarios"] ?>">Editar</a> </td>
-            <td><a href="index.php?menuop=excluir-usuarios&idUsuarios=<?=$dados["idUsuarios"] ?>">Excluir</a> </td>
+            <td class="text-nowrap"><?=$dados["nomeUsuarios"] ?></td>
+            <td class="text-nowrap"><?=$dados["telUsuarios"] ?></td>
+            <td><a href="index.php?menuop=editar-usuarios&idUsuarios=<?=$dados[" idUsuarios"] ?>">Editar</a> </td>
+            <td><a href="index.php?menuop=excluir-usuarios&idUsuarios=<?=$dados[" idUsuarios"] ?>">Excluir</a> </td>
 
         </tr>
         <?php  
@@ -59,8 +59,8 @@
     </tbody>
 </table>
 
-  <ul class="pagination">
-<?php
+<ul class="pagination justify-content-center">
+    <?php
     $sqlTotal = "SELECT idUsuarios FROM tbusuarios";
     $sqrTotal = mysqli_query($conexao,$sqlTotal) or die(mysqli_error($conexao));
     $numTotal = mysqli_num_rows($sqrTotal);
@@ -76,20 +76,21 @@
     }
 
     for ($i=1;$i<=$totalPagina;$i++){
-        if ($i == $pagina) {
-            echo $i;
-        } else {
-            echo "<li class='page-item'><a class='page-link' href=\"?menuop=usuarios&pagina={$i}\"> {$i} </a></li>";
+        if($i > ($pagina-5) && $i < ($pagina+5)){
+            if ($i == $pagina) {
+                echo "<li class='page-item active'><a class='page-link'>$i</span></li>";
+            } else {
+                echo "<li class='page-item'><a class='page-link' href=\"?menuop=usuarios&pagina={$i}\"> {$i} </a></li>";
+            }
         }
-
     }
 
     if ($pagina<($totalPagina-5)) {
         ?>
-        <a href="?menuop=usuarios&pagina=<?php echo $pagina+1 ?>"></a>
+        <li class='page-item'><a class='page-link' href="?menuop=usuarios&pagina=<?php echo $pagina+1 ?>">>></a></li>
         <?php
     }
 
-    echo "<a href=\"?menuop=usuarios&pagina=$totalPagina\">Ultima Pagina</a>";
+    echo "<li class='page-item'><a class='page-link' href=\"?menuop=usuarios&pagina=$totalPagina\">Ultima Pagina</a></li>";
 ?>
 </ul>
