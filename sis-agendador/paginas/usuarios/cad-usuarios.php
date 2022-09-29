@@ -3,18 +3,18 @@
 </header>
 <div>
     <form action="index.php?menuop=inserir-usuarios" method="post">
-    <div>
-        <label for="nomeUsuarios">Nome</label>
-        <input type="text" name="nomeUsuario">
+    <div class="nb-3">
+        <label class="form-label" for="nomeUsuarios">Nome</label>
+        <input class="form-control" type="text" name="nomeUsuario">
     </div>
 
-    <div>
-        <label for="telUsuarios">Telefone</label>
-        <input type="text" name="telUsuario">
+    <div class="nb-3">
+        <label class="form-label" for="telUsuarios">Telefone</label>
+        <input class="form-control" type="text" name="telUsuario">
     </div>
 
-    <div>
-        <input type="submit" value="Cadastrar" name="btnAdicionar">
+    <div class="nb-3">
+        <input class="btn btn-success" type="submit" value="Cadastrar" name="btnAdicionar">
     </div>
     </form>
 
