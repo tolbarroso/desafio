@@ -8,11 +8,15 @@
     $descricaoAtividades = mysqli_real_escape_string($conexao,$_POST["descricaoAtividades"]);
     $statusAtividades = mysqli_real_escape_string($conexao,$_POST["statusAtividades"]);
     $dataAtividade = mysqli_real_escape_string($conexao,$_POST["dataAtividade"]);
+    $horaInicio = mysqli_real_escape_string($conexao,$_POST["horaInicio"]);
+    $horaFim = mysqli_real_escape_string($conexao,$_POST["horaFim"]);
     $sql = "UPDATE tbatividades SET
     nomeAtividades = '{$nomeAtividades}',
     descricaoAtividades = '{$descricaoAtividades}'
     statusAtividades = '{$statusAtividades}'
     dataAtividade = '{$dataAtividade}'
+    horaInicio = '{$horaInicio}'
+    horaFim = '{$horaFim}'
     WHERE idAtividades = '{$idAtividades}'
     ";
 

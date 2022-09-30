@@ -47,14 +47,29 @@
         </div>
     </div>
 
-    <div class="mb-3 col-3">
+    <div class="row">
+    <div class="mb-3 col-12 col-sm-3">
         <label class="form-label" for="dataAtividade">Data</label>
         <div class="input-group">
             <span class="input-group-text"></span>
             <input class="form-control" type="date" name="dataAtividade" value="<?=$dados["dataAtividade"] ?> ">
         </div>
     </div>
-
+            <div class="mb-3 col-12 col-sm-3">
+                <label class="form-label" for="horaInicio">Hora de Conclusão</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-wach"></i></span>
+                    <input class="form-control" type="time" name="horaInicio" value="<?=$dados['horaInicio']?>" required>
+                </div>
+            </div>
+            <div class="mb-3 col-12 col-sm-3">
+                <label class="form-label" for="horaFim">Hora de Conclusão</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-wach"></i></span>
+                    <input class="form-control" type="time" name="horaFim" value="<?=$dados['horaFim']?>" required>
+                </div>
+            </div>
+        </div>
     <div class="mb-3 col-3">
     <input class="btn btn-success" type="submit" value="Atualizar" name="btnAtualizar">
     </div>
