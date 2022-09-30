@@ -1,7 +1,7 @@
 <?php
     $idUsuarios = $_GET["idUsuarios"]
 
-    $sql = "SELECT * FROM tbusuarios WHERE idContato= {$idUsuarios}";
+    $sql = "SELECT * FROM tbusuarios WHERE idUsuarios= {$idUsuarios}";
     $rs = mysqli_query($conexao,$sql) or die("ERRO AO RECUPERAR OS DADOS DO REGISTRO". mysqli_error($conexao));
     $dados = mysqli_fetch_assoc($rs);
 ?>
