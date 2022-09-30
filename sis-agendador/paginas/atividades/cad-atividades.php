@@ -7,7 +7,7 @@
         <label class="form-label" for="nomeAtividades">Nome</label>
         <div class="input-group">
             <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
-            <input class="form-control" type="text" name="nomeUsuario">
+            <input class="form-control" type="text" name="nomeAtividades" required>
         </div>
     </div>
 
@@ -15,7 +15,7 @@
         <label class="form-label" for="descricaoAtividades">Descrição</label>
         <div class="input-group">
             <span class="input-group-text"></span>
-            <input class="form-control" type="text" name="descricaoAtividades">
+            <input class="form-control" type="text" name="descricaoAtividades" required>
         </div>
     </div>
 
@@ -23,12 +23,20 @@
         <label class="form-label" for="statusAtividades">Status</label>
         <div class="input-group">
             <span class="input-group-text"></span>
-            <select name="statusAtividades" id="statusAtividades">
-            <option <?php echo ($dados['statusAtividades']=='')?'selected':'' ?> value="">Selecione o status atual da atividade</option>
-            <option <?php echo ($dados['statusAtividades']=='Pendente')?'selected':'' ?> value="Pendente">Pendente</option>
-            <option <?php echo ($dados['statusAtividades']=='Concluída')?'selected':'' ?> value="Concluída">Concluída</option>
-            <option <?php echo ($dados['statusAtividades']=='Cancelada')?'selected':'' ?> value="Cancelada">Cancelada</option>
+            <select name="statusAtividades" id="statusAtividades" required>
+            <option selected value="">Selecione o status atual da atividade</option>
+            <option value="Pendente">Pendente</option>
+            <option value="Concluída">Concluída</option>
+            <option value="Cancelada">Cancelada</option>
         </select>
+        </div>
+    </div>
+
+    <div class="mb-3 col-3">
+        <label class="form-label" for="dataAtividade">Data</label>
+        <div class="input-group">
+            <span class="input-group-text"></span>
+            <input class="form-control" type="date" name="dataAtividade" required>
         </div>
     </div>
 

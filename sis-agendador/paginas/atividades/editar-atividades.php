@@ -48,6 +48,14 @@
     </div>
 
     <div class="mb-3 col-3">
+        <label class="form-label" for="dataAtividade">Data</label>
+        <div class="input-group">
+            <span class="input-group-text"></span>
+            <input class="form-control" type="date" name="dataAtividade" value="<?=$dados["dataAtividade"] ?> ">
+        </div>
+    </div>
+
+    <div class="mb-3 col-3">
     <input class="btn btn-success" type="submit" value="Atualizar" name="btnAtualizar">
     </div>
     </form>

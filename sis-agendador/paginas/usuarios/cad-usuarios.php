@@ -7,7 +7,7 @@
         <label class="form-label" for="nomeUsuarios">Nome</label>
         <div class="input-group">
             <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
-            <input class="form-control" type="text" name="nomeUsuario">
+            <input class="form-control" type="text" name="nomeUsuario" required>
         </div>
     </div>
 
@@ -15,7 +15,7 @@
         <label class="form-label" for="telUsuarios">Telefone</label>
         <div class="input-group">
             <span class="input-group-text"><i class="bi bi-telefone-fill"></i></span>
-            <input class="form-control" type="text" name="telUsuario">
+            <input class="form-control" type="text" name="telUsuario" required>
         </div>
     </div>
 

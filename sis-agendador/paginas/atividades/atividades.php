@@ -20,6 +20,7 @@
             <th>Nome</th>
             <th>Descrição</th>
             <th>Status</th>
+            <th>Data</th>
             <th>Edição</th>
             <th>Excluir</th>
         </tr>
@@ -38,6 +39,7 @@
         upper(nomeAtividades) AS nomeAtividades,
         upper(descricaoAtividades) AS descricaoAtividades,
         statusAtividades
+        dataAtividade
         FROM tbatividades 
         WHERE 
         idAtividades= '{$txt_pesquisa}' or 
@@ -54,6 +56,7 @@
             <td class="text-nowrap"><?=$dados["nomeAtividades"] ?></td>
             <td class="text-nowrap"><?=$dados["descricaoAtividades"] ?></td>
             <td class="text-nowrap"><?=$dados["statusAtividades"] ?></td>
+            <td class="text-nowrap"><?=$dados["dataAtividade"] ?></td>
             <td class="text-center"><a class="btn btn-butline-warning btn-sm" href="index.php?menuop=editar-atividades&idAtividades=<?=$dados[" idAtividades"] ?>"><i class="bi bi-pencil-square"></i></a> </td>
             <td class="text-center"><a class="btn btn-butline-danger btn-sm" href="index.php?menuop=excluir-atividades&idAtividades=<?=$dados[" idAtividades"] ?>"><i class="bi bi-trash-fill"></i></a> </td>
 
