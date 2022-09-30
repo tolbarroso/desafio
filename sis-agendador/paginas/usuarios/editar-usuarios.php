@@ -36,9 +36,9 @@
         </div>
         </div>
 
-    <div>
-        <input type="submit" value="Atualizar" name="btnAtualizar">
-    </div>
+        <div class="mb-3 col-3">
+            <input class="btn btn-success" type="submit" value="Atualizar" name="btnAtualizar">
+        </div>
     </form>
 
     
