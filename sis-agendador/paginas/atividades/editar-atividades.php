@@ -7,7 +7,7 @@
 ?>
 
 <header>
-    <h3>Editar Usuario</h3>
+    <h3>Editar Atividade</h3>
 </header>
 
 <div>
