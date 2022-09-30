@@ -67,7 +67,10 @@ include("db/conexao.php");
             case 'atividades':
                 include("paginas/atividades/atividades.php");
                 break;
-            
+                
+            case 'cad-atividades':
+                include("paginas/atividades/cad-atividades.php");
+                break;
             default:
                 include("paginas/home/home.php");
                 break;
