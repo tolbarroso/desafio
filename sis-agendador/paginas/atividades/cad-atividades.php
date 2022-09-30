@@ -2,7 +2,7 @@
     <h3>Cadastro de atividade</h3>
 </header>
 <div>
-    <form action="index.php?menuop=inserir-atividades" method="post">
+    <form class="needs-validation" action="index.php?menuop=inserir-atividades" method="post" novalidate>
     <div class="mb-3 col-3">
         <label class="form-label" for="nomeAtividades">Nome</label>
         <div class="input-group">
@@ -43,7 +43,5 @@
     <div class="mb-3 col-3">
         <input class="btn btn-warning" type="submit" value="Cadastrar" name="btnAdicionar">
     </div>
-    </form>
-
-    
+    </form>    
 </div>

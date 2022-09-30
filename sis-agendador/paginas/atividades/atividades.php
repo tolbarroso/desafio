@@ -3,16 +3,17 @@
 </header>
 
 <div>
-    <a class="btn btn-outline-secundary nb-2" href="index.php?menuop=cad-atividades"><i class="bi bi-person-plus-fill"></i>Nova Atividade</a>
+    <a class="btn btn-outline-secundary mb-2" href="index.php?menuop=cad-atividades"><i class="bi bi-list-task"></i>Nova Atividade</a>
 </div>
 <div>
     <form action="index.php?menuop=atividades" method="post">
-        <input type="text" name="txt_pesquisa">
-        <input type="submit" value="Pesquisar">
-
-        <button class="btn btn-outline-success btn-sm" type="submit"><i class="bi bi-search"></i>Pesquisar</button>
+    <div class="input-group">
+            <input class="form-control" type="text" name="txt_pesquisa" value="<?=$txt_pesquisa?>">
+            <button class="btn btn-outline-success btn-sm" type="submit"><i class="bi bi-search"></i> Pesquisar</button>
+        </div>
     </form>
 </div>
+<div class="tabela">
 <table class="table table-dark table-striped table-bordered table-sm">
     <thead>
         <tr>
@@ -21,6 +22,8 @@
             <th>Descrição</th>
             <th>Status</th>
             <th>Data</th>
+            <th>Hora de Início</th>
+            <th>Hora de Conclusão</th>
             <th>Edição</th>
             <th>Excluir</th>
         </tr>
@@ -38,20 +41,34 @@
         idAtividades,
         upper(nomeAtividades) AS nomeAtividades,
         upper(descricaoAtividades) AS descricaoAtividades,
-        statusAtividades
-        dataAtividade
+        statusAtividades,
+        DATE_FORMAT(dataAtividade, '%d/%m/%Y') AS dataAtividade,
+        horaInicio,
+        horaFim
         FROM tbatividades 
         WHERE 
         idAtividades= '{$txt_pesquisa}' or 
         nomeAtividades LIKE '%{$txt_pesquisa}%'
-        ORDER BY nomeAtividades ASC
-        LIMIT $inicio , $quantidade
+        DATE_FORMAT(dataAtividade, '%d/%m/%Y') LIKE '%{$txt_pesquisa}%'
+        ORDER BY statusAtividades, dataAtividade 
+        LIMIT $inicio, $quantidade
         ";
         $rs = mysql_query($conexao,$sql) or die("ERRO AO EXECUTAR A CONSULTA". mysql_error($conexao));
         while ($dados = mysqli_fetch_assoc($rs)) {
             
         ?>
         <tr>
+            <td>
+                <a class="btn btn-secondary btn-sm" href="index.php?menuop=atividades&pagina=<?=$pagina?>&idAtividades=<?=$dados['idAtividades']?>&statusAtividades=<?=$dados['statusAtividades']?>" >
+                    <?php
+                        if($dados['statusAtividades']==0){
+                            echo '<i class="bi bi-square"></i>';
+                        }else{
+                            echo '<i class="bi bi-check-square"></i>';
+                        }
+                    ?>
+                </a>   
+            </td>
             <td><?=$dados["idAtividades"] ?></td>
             <td class="text-nowrap"><?=$dados["nomeAtividades"] ?></td>
             <td class="text-nowrap"><?=$dados["descricaoAtividades"] ?></td>
@@ -67,6 +84,7 @@
         ?>
     </tbody>
 </table>
+</div>
 
 <ul class="pagination justify-content-center">
     <?php
