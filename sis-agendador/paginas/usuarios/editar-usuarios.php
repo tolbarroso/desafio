@@ -12,9 +12,12 @@
 
 <div>
     <form action="index.php?menuop=atualizar-usuarios" method="post">
-    <div>
-        <label for="idUsuarios">ID</label>
-        <input type="text" name="idUsuarios" value="<?=$dados["idUsuarios"] ?>" readonly>
+    <div class="mb-3 col-3">
+        <label class="form-label" for="idUsuarios">ID</label>
+        <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-key-fill"></i></span>
+        <input class="form-control" type="text" name="idUsuarios" value="<?=$dados["idUsuarios"] ?>" readonly>
+        </div>
     </div>
 
     <div class="mb-3 col-3">

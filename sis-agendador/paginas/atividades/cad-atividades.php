@@ -20,14 +20,14 @@
     </div>
 
     <div class="mb-3 col-3">
-        <label class="form-label" for="statusAtividade">Status</label>
+        <label class="form-label" for="statusAtividades">Status</label>
         <div class="input-group">
-            <span class="input-group-text"><i class="bi bi-gender-ambiguous"></i></span>
-            <select name="statusAtividade" id="statusAtividade">
-            <option selected>Selecione o status atual da atividade</option>
-            <option value="Pendente"></option>
-            <option value="Concluída"></option>
-            <option value="Cancelada"></option>
+            <span class="input-group-text"></span>
+            <select name="statusAtividades" id="statusAtividades">
+            <option <?php echo ($dados['statusAtividades']=='')?'selected':'' ?> value="">Selecione o status atual da atividade</option>
+            <option <?php echo ($dados['statusAtividades']=='Pendente')?'selected':'' ?> value="Pendente">Pendente</option>
+            <option <?php echo ($dados['statusAtividades']=='Concluída')?'selected':'' ?> value="Concluída">Concluída</option>
+            <option <?php echo ($dados['statusAtividades']=='Cancelada')?'selected':'' ?> value="Cancelada">Cancelada</option>
         </select>
         </div>
     </div>

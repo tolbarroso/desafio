@@ -15,7 +15,7 @@
     <div class="mb-3 col-3">
         <label class="form-label" for="idAtividades">ID</label>
         <div class="input-group">
-        <span class="input-group-text"></span>
+            <span class="input-group-text"><i class="bi bi-key-fill"></i></span>
         <input class="form-control" type="text" name="idAtividades" value="<?=$dados["idAtividades"] ?>" readonly>
         </div>
     </div>
@@ -24,25 +24,25 @@
         <label class="form-label" for="nomeAtividades">Nome</label>
         <div class="input-group">
             <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
-            <input class="form-control" type="text" name="nomeUsuario" value="<?=$dados["nomeAtividades"] ?>">
+            <input class="form-control" type="text" name="nomeAtividades" value="<?=$dados["nomeAtividades"] ?>">
     </div>
 
     <div class="mb-3 col-3">
         <label class="form-label" for="descricaoAtividades">Descrição</label>
         <div class="input-group">
-            <span class="input-group-text"><i class="bi bi-telefone-fill"></i></span>
-            <input class="form-control" type="text" name="telUsuario" value="<?=$dados["descricaoAtividades"] ?>">
+            <span class="input-group-text"></span>
+            <input class="form-control" type="text" name="descricaoAtividades" value="<?=$dados["descricaoAtividades"] ?>">
     </div>
 
     <div class="mb-3 col-3">
         <label class="form-label" for="statusAtividade">Status</label>
         <div class="input-group">
-            <span class="input-group-text"><i class="bi bi-gender-ambiguous"></i></span>
+            <span class="input-group-text"></span>
             <select name="statusAtividade" id="statusAtividade" value="<?=$dados["statusAtividades"] ?>">
             <option selected>Selecione o status atual da atividade</option>
-            <option value="Pendente"></option>
-            <option value="Concluída"></option>
-            <option value="Cancelada"></option>
+            <option value="Pendente">Pendente</option>
+            <option value="Concluída">Concluída</option>
+            <option value="Cancelada">Cancelada</option>
         </select>
         </div>
     </div>
