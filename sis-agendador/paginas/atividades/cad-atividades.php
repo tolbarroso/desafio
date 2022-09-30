@@ -12,10 +12,10 @@
     </div>
 
     <div class="mb-3 col-3">
-        <label class="form-label" for="descricaoAtividades">Telefone</label>
+        <label class="form-label" for="descricaoAtividades">Descrição</label>
         <div class="input-group">
-            <span class="input-group-text"><i class="bi bi-telefone-fill"></i></span>
-            <input class="form-control" type="text" name="telUsuario">
+            <span class="input-group-text"></span>
+            <input class="form-control" type="text" name="descricaoAtividades">
         </div>
     </div>
 
