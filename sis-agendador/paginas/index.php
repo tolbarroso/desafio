@@ -67,10 +67,27 @@ include("db/conexao.php");
             case 'atividades':
                 include("paginas/atividades/atividades.php");
                 break;
-                
+
             case 'cad-atividades':
                 include("paginas/atividades/cad-atividades.php");
                 break;
+
+            case 'inserir-atividades':
+                include("paginas/atividades/inserir-atividades.php");
+                break;
+    
+            case 'editar-atividades':
+                include("paginas/atividades/editar-atividades.php");
+                break;
+    
+            case 'atualizar-atividades':
+                include("paginas/atividades/atualizar-atividades.php");
+                break;
+                
+            case 'excluir-atividades':
+                include("paginas/atividades/excluir-atividades.php");
+                break;
+
             default:
                 include("paginas/home/home.php");
                 break;
