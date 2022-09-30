@@ -33,7 +33,7 @@
     </div>
 
     <div class="mb-3 col-3">
-        <input class="btn btn-success" type="submit" value="Cadastrar" name="btnAdicionar">
+        <input class="btn btn-warning" type="submit" value="Cadastrar" name="btnAdicionar">
     </div>
     </form>
 
