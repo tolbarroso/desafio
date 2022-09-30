@@ -40,6 +40,21 @@
         </div>
     </div>
 
+    <div class="row">
+            <div class="mb-3 col-3">
+                <label for="dataAtividade" class="form-label">Data</label>
+                <input class="form-control" type="date" name="dataAtividade" id="dataAtividade" required>
+            </div>
+            <div class="mb-3 col-3">
+                <label for="horaInicio" class="form-label">Hora de Inicio</label>
+                <input class="form-control" type="time" name="horaInicio" id="horaInicio" required>
+            </div>
+            <div class="mb-3 col-3">
+                <label for="horaFim" class="form-label">Hora de Conclusão</label>
+                <input class="form-control" type="time" name="horaFim" id="horaFim" required>
+            </div>
+        </div>
+
     <div class="mb-3 col-3">
         <input class="btn btn-warning" type="submit" value="Cadastrar" name="btnAdicionar">
     </div>
