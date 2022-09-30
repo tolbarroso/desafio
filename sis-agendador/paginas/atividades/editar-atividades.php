@@ -11,12 +11,12 @@
 </header>
 
 <div>
-    <form action="index.php?menuop=atualizar-usuarios" method="post">
+    <form action="index.php?menuop=atualizar-atividades" method="post">
     <div class="mb-3 col-3">
         <label class="form-label" for="idAtividades">ID</label>
         <div class="input-group">
         <span class="input-group-text"></span>
-        <input class="form-control" type="text" name="idAtividades" value="<?=$dados["idAtividades"] ?>">
+        <input class="form-control" type="text" name="idAtividades" value="<?=$dados["idAtividades"] ?>" readonly>
         </div>
     </div>
 

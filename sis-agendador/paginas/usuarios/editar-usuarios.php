@@ -14,7 +14,7 @@
     <form action="index.php?menuop=atualizar-usuarios" method="post">
     <div>
         <label for="idUsuarios">ID</label>
-        <input type="text" name="idUsuarios" value="<?=$dados["idUsuarios"] ?>">
+        <input type="text" name="idUsuarios" value="<?=$dados["idUsuarios"] ?>" readonly>
     </div>
 
     <div class="mb-3 col-3">
