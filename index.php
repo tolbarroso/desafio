@@ -40,6 +40,10 @@ include("./db/conexao.php");
                 include("paginas/home/home.php");
                 break;
 
+            case 'login':
+                include("paginas/home/login.php");
+                break;
+
             case 'usuarios':
                 include("paginas/usuarios/usuarios.php");
                 break;
